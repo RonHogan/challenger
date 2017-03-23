@@ -11,7 +11,7 @@
 
 		c) Homebrew 1.1.11
 
-		d) sqlite3 3.14.0
+		d) sqlite3 3.14.0 (for development. In production i will use postgresql)
 
 
 2. After forking/downloading repo remember to install all gems using Homebrew.

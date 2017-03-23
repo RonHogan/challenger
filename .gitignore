@@ -19,3 +19,11 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore .DS_STORE
+.DS_Store
+.DS_Store?
+
+#Ignore secrets
+/config/secrets.yml
+/config/database.yml

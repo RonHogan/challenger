@@ -25,15 +25,13 @@
 
 in your terminal.
 
-
-
 4. To view the application locally you have to start server. To do that run 
 
 
 	rails s 
 
 
-on your terinal, and enter 
+in your terminal, and enter 
 
 
 	http://localhost:3000 
@@ -57,7 +55,9 @@ in your terminal and starting the server again each time you create a new migrat
 
 6. To exit application remember to hit 
 
+
 	control + c 
+
 
 in your terminal to stop local server from running.
 

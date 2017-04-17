@@ -1,0 +1,17 @@
+<%= form_for(challange_wall) do |f| %>
+  <% if challange_wall.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(challange_wall.errors.count, "error") %> prohibited this challange_wall from being saved:</h2>
+
+      <ul>
+      <% challange_wall.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class ChallangeWall < ApplicationRecord
+end

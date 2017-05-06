@@ -1,21 +1,13 @@
-<%= form_for(challange_wall) do |f| %>
-  <% if challange_wall.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(challange_wall.errors.count, "error") %> prohibited this challange_wall from being saved:</h2>
+<center>
+  <%= simple_form_for(@challange_wall) do |f| %>
+    <%= f.error_notification %>
 
-      <ul>
-      <% challange_wall.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div class="form-inputs">
+      <%= f.input :title %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
     </div>
   <% end %>
-
-<!--   <div class="form-inputs">
-      <%= f.input :title %>
-  </div> -->
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</center>

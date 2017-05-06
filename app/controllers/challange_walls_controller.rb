@@ -1,4 +1,5 @@
 class ChallangeWallsController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
   before_action :set_challange_wall, only: [:show, :edit, :update, :destroy]
 
   # GET /challange_walls
@@ -25,7 +26,7 @@ class ChallangeWallsController < ApplicationController
   # POST /challange_walls.json
   def create
     @challange_wall = ChallangeWall.new(challange_wall_params)
-
+    @challange_wall.user = current_user
     respond_to do |format|
       if @challange_wall.save
         format.html { redirect_to @challange_wall, notice: 'Challange wall was successfully created.' }
@@ -40,6 +41,7 @@ class ChallangeWallsController < ApplicationController
   # PATCH/PUT /challange_walls/1
   # PATCH/PUT /challange_walls/1.json
   def update
+    @challange_wall.user = current_user
     respond_to do |format|
       if @challange_wall.update(challange_wall_params)
         format.html { redirect_to @challange_wall, notice: 'Challange wall was successfully updated.' }
@@ -69,6 +71,6 @@ class ChallangeWallsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def challange_wall_params
-      params.fetch(:challange_wall, {})
+      params.require(:challange_wall).permit(:title)
     end
 end

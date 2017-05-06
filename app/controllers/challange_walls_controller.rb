@@ -2,11 +2,6 @@ class ChallangeWallsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :set_challange_wall, only: [:show, :edit, :update, :destroy]
 
-  # GET /challange_walls
-  # GET /challange_walls.json
-  def index
-    @challange_walls = ChallangeWall.all
-  end
 
   # GET /challange_walls/1
   # GET /challange_walls/1.json
@@ -58,7 +53,7 @@ class ChallangeWallsController < ApplicationController
   def destroy
     @challange_wall.destroy
     respond_to do |format|
-      format.html { redirect_to challange_walls_url, notice: 'Challange wall was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Challange wall was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

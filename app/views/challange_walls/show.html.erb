@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_challange_wall_path(@challange_wall) %> |
-<%= link_to 'Back', challange_walls_path %>
+<% end %>
+<%= @challange_wall.title %> 
+<br>
+<%= link_to 'Back', root_path %>

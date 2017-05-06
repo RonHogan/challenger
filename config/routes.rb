@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 devise_for :users
 root 'home#index'
 
-resources :challange_walls
+resources :challange_walls, except: [:index]
 
 end

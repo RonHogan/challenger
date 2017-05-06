@@ -4,7 +4,8 @@
 
 		<% if user_signed_in? %>
 			Hello, <%= current_user.email %>!
-			<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+			<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> |
+			<%= link_to "Create a new challange wall", new_challange_wall_path, :class => 'navbar-link' %>
 		<% else %>
 			<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
     		<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>	
